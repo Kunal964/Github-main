@@ -1,0 +1,254 @@
+/* Create Repository Page */
+.create-repo-page {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0c1116;
+  color: #f1f6fd;
+  font-family: "Inter", system-ui, sans-serif;
+  padding: 40px 20px 80px;
+}
+
+.create-repo-container {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.create-repo-header {
+  margin-bottom: 24px;
+}
+
+.create-repo-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f1f6fd;
+  margin: 0 0 8px;
+}
+
+.create-repo-header p {
+  font-size: 0.9rem;
+  color: #8b949e;
+  margin: 0;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #30363d;
+  margin: 24px 0;
+}
+
+/* Form */
+.create-repo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f1f6fd;
+  margin: 0;
+}
+
+.required {
+  color: #f85149;
+}
+
+.optional {
+  font-weight: 400;
+  color: #8b949e;
+  font-size: 0.85rem;
+}
+
+.form-input {
+  width: 100%;
+  max-width: 440px;
+  height: 36px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 0 12px;
+  color: #f1f6fd;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #388bfd;
+  box-shadow: 0 0 0 3px rgba(56, 139, 253, 0.3);
+}
+
+.form-input::placeholder {
+  color: #484f58;
+}
+
+.form-hint {
+  font-size: 0.8rem;
+  color: #8b949e;
+}
+
+/* Visibility Options */
+.visibility-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  background-color: #0c1116;
+  margin-bottom: 10px;
+}
+
+.visibility-option:hover {
+  border-color: #58a6ff;
+  background-color: #161b22;
+}
+
+.visibility-option.selected {
+  border-color: #388bfd;
+  background-color: #161b22;
+}
+
+.visibility-icon {
+  font-size: 1.4rem;
+  margin-top: 2px;
+}
+
+.visibility-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.visibility-text strong {
+  font-size: 0.9rem;
+  color: #f1f6fd;
+}
+
+.visibility-text span {
+  font-size: 0.8rem;
+  color: #8b949e;
+}
+
+.visibility-radio {
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+}
+
+.visibility-radio input[type="radio"] {
+  accent-color: #388bfd;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Error */
+.form-error {
+  background-color: #2d1015;
+  border: 1px solid #f85149;
+  border-radius: 6px;
+  padding: 12px 16px;
+  color: #f85149;
+  font-size: 0.875rem;
+}
+
+/* Actions */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-create {
+  height: 36px;
+  padding: 0 20px;
+  background-color: #238636;
+  color: #f1f6fd;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid rgba(240, 246, 252, 0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-create:hover:not(:disabled) {
+  background-color: #2ea043;
+  transform: translateY(-1px);
+}
+
+.btn-create:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-cancel {
+  height: 36px;
+  padding: 0 20px;
+  background-color: transparent;
+  color: #c9d1d9;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-cancel:hover {
+  background-color: #21262d;
+  border-color: #8b949e;
+}
+
+@media (max-width: 600px) {
+  .create-repo-page {
+    padding: 24px 12px 60px;
+  }
+
+  .create-repo-container {
+    padding: 0 8px;
+  }
+
+  .create-repo-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .form-input,
+  .visibility-option,
+  .form-actions {
+    width: 100%;
+  }
+
+  .form-input {
+    max-width: 100%;
+  }
+
+  .visibility-option {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-create,
+  .btn-cancel {
+    width: 100%;
+  }
+}
